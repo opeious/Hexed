@@ -1,18 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void LateUpdate ()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.LogError ("Test");
+        this.gameObject.transform.RotateAround (Vector3.zero, Vector3.down, 10f * Time.deltaTime);
     }
 }
